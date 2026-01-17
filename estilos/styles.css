@@ -1,0 +1,132 @@
+/* 1. BANNER PRINCIPAL */
+.banner-recto {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+    url('https://images.unsplash.com/photo-1584036561566-baf8f5f1b144?q=80&w=2000'); 
+    background-size: cover;
+    background-position: center;
+    padding: 40px;
+    text-align: center;
+    color: white;
+    border: 3px solid black;
+    border-radius: 0px !important;
+    margin-bottom: 20px;
+}
+
+/* 2. BOTÓN EVALUAR (Corregido a bordes rectos) */
+.stButton > button {
+    width: 200% !important;
+    background-color: #0055FF !important;
+    color: white !important;
+    border: 3px solid black !important;
+    border-radius: 0px !important; /* Cambiado de 20px a 0px */
+    box-shadow: 6px 6px 0px 0px rgba(0,0,0,1);
+    font-weight: bold !important;
+    height: 50px;
+    transition: 0.1s;
+}
+
+.stButton > button:hover {
+    border-color: black !important;
+    color: white !important;
+}
+
+.stButton > button:active {
+    box-shadow: none !important;
+    transform: translate(3px, 3px);
+}
+
+/* 3. BLOQUES INFORMATIVOS (Sustituyen a los modales flotantes) */
+.modal-content-static {
+    background: white;
+    border: 3px solid black;
+    border-radius: 0px !important;
+    width: 100%; /* Adaptado al ancho del sitio */
+    margin-top: 30px;
+    margin-bottom: 10px;
+    box-shadow: 10px 10px 0px 0px rgba(0,0,0,1);
+    overflow: hidden;
+}
+
+.modal-header-neo {
+    background: #0055FF;
+    color: white;
+    padding: 12px 20px;
+    font-weight: bold;
+    border-bottom: 3px solid black;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.modal-body-neo {
+    padding: 20px;
+    color: black;
+}
+
+/* 4. BOTÓN LINKEDIN DENTRO DEL BLOQUE */
+.btn-link-neo {
+    display: inline-block;
+    background: #0055FF;
+    color: white !important;
+    padding: 10px 25px;
+    border: 3px solid black;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 4px 4px 0px black;
+    transition: 0.1s;
+}
+
+.btn-link-neo:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px black;
+}
+
+/* 5. SEPARADOR RECTO */
+.hr-neo {
+    border: 0;
+    border-top: 2px solid black;
+    margin: 15px 0;
+}
+
+/* Contenedor Flex para alinear foto y texto */
+.perfil-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; /* Espacio entre foto y texto */
+    flex-wrap: wrap; /* Para que en celulares se ponga uno abajo del otro */
+    text-align: left; /* El texto se lee mejor alineado a la izquierda aquí */
+}
+
+/* Estilo de la Foto Circular Neo-brutalista */
+.perfil-foto {
+    flex-shrink: 0;
+    width: 150px;
+    height: 150px;
+    border: 4px solid black; /* Borde grueso característico */
+    border-radius: 50%; /* La hace circular */
+    overflow: hidden;
+}
+
+.perfil-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita que la foto se estire */
+}
+
+/* Ajuste del texto al lado de la foto */
+.perfil-texto {
+    flex: 1;
+    min-width: 250px;
+}
+
+.perfil-texto p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* Ajuste para móviles */
+@media (max-width: 600px) {
+    .perfil-container {
+        text-align: center;
+    }
+}

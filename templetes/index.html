@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>NeumonIA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .neo-brutalism {
+            background-color: #0055FF;
+            border: 2px solid black;
+            border-radius: 60px;
+            box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+            transition: all 0.1s;
+        }
+        .neo-brutalism:active {
+            box-shadow: none;
+            transform: translate(2px, 2px);
+        }
+    </style>
+</head>
+<body class="bg-[#F2F2F2] min-h-screen flex flex-col items-center justify-center font-sans p-6">
+    <h1 class="text-2xl mb-8 font-bold">NeumonIA</h1>
+
+    <form action="/predict" method="post" enctype="multipart/form-data" class="flex flex-col items-center w-full max-w-2xl">
+        <label class="relative w-full aspect-video neo-brutalism flex items-center justify-center cursor-pointer overflow-hidden">
+            <input type="file" name="file" class="hidden" onchange="this.form.submit()">
+            <span class="text-black text-2xl font-medium">Cargar imagen</span>
+        </label>
+        <p class="mt-4 text-gray-500 italic">La evaluación comenzará al elegir la foto.</p>
+    </form>
+
+    {% if condicion %}
+    <div class="mt-10 text-center">
+        <h2 class="text-5xl font-black text-blue-700">{{ condicion }}</h2>
+        <p class="text-xl font-bold mt-2">Confianza: {{ confianza }}%</p>
+        <a href="/" class="mt-6 inline-block bg-white border-2 border-black px-6 py-2 rounded-xl font-bold hover:bg-gray-100">Nueva evaluación</a>
+    </div>
+    {% endif %}
+</body>
+</html>
