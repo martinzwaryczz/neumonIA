@@ -54,5 +54,9 @@ optimizer = torch.optim.Adam(params=model_torch.parameters(), lr=0.0001, weight_
 loss_fn = nn.CrossEntropyLoss()
 </code>
 
+
 Set de datos utilizado:  https://drive.google.com/drive/u/0/folders/1NCFivZMemajwFNv-4JI5GJG73ySPN9A6
+
+
+Proximas actualizaciones: Explainable AI (XAI), mejorar con un mapa de calor las zonas que detectan que efectivamente hay una neumonia. De momento (17/01/2026) no se nada de esto.
 
